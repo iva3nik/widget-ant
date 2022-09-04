@@ -3,7 +3,8 @@ import "antd/dist/antd.css";
 import { Modal, Button, Form, Input } from "antd";
 import "./App.css";
 
-function App() {
+function App({ domElement }) {
+  const subreddit = domElement.getAttribute("data-subreddit");
   const [isOpened, setIsOpened] = useState(false);
   const [name, SetName] = useState("");
   const [description, SetDescription] = useState("");
